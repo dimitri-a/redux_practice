@@ -4,8 +4,6 @@ export const ProductList = (props) => {
 
   const { products } = props;
 
-  debugger
-
   return (
     <ul>
       {products.map((p) => {

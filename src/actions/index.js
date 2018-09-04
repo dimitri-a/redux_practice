@@ -1,6 +1,3 @@
-
-import thunk from "redux-thunk";
-
 export const addUsers = repos => ({
   type: "ADD_USERS",
   repos

@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
       <AutoCompleteContainer></AutoCompleteContainer>
-      <Results></Results>
+ 
       </div>
     );
   }
