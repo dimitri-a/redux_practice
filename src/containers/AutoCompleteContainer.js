@@ -2,27 +2,23 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { AutoComplete } from '../components/AutoComplete';
+import * as AutoActions from '../actions'
+
 
 export class AutoCompleteContainer extends Component {
   static propTypes = {
     prop: PropTypes
   }
 
-  render() {
-    return (
-      <div>
-    this is auto c cintainer
-      </div>
-    )
-  }
 }
 
 const mapStateToProps = (state) => ({
-  
+  users: state.users
 })
 
-const mapDispatchToProps = {
-  
-}
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(AutoActions, dispatch)
+})
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(AutoComplete)
