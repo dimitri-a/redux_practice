@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class AutoComplete extends Component {
+export class AutoComplete extends Component {
 
 
     getData = (val) => {

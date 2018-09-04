@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { AutoComplete } from '../components/AutoComplete';
 import * as AutoActions from '../actions'
+import { bindActionCreators } from 'redux'
 
 
 export class AutoCompleteContainer extends Component {
