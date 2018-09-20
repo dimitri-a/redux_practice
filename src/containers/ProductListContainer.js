@@ -2,14 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {ProductList}     from '../components/ProductList'
+import * as actions from '../actions/counterAction'
 
-const mapStateToProps = (state) => ({
+const blaat = (state) =>({
   products: state.products
 })
 
-
-const mapDispatchToProps = {
-  
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductList)
+export default connect(blaat,actions)(ProductList)
