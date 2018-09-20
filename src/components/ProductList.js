@@ -1,21 +1,33 @@
 import React from 'react'
 import { getUsers } from '../actions/counterAction';
 
-export const ProductList = (props) => {
+export class ProductList extends React.Component {
 
-  const { products,getUsers } = props;
+  constructor(props) {
+    super(props);
+  }
 
-  console.log('actions',getUsers);
+  handleClick = () => {
+    console.log('hi');
+  }
 
-  getUsers();
-    
-  return (
-    
-    <ul>
-      {products.map((p) => {
-        return <li>{p.name}</li>
-      })}
-    </ul>
-  )
+  //dispatch(getUsers());
+
+  render() {
+    const { products, getUsers, dispatch } = this.props;
+
+    //console.log('actions', props);
+
+    return (
+      <div>
+        <button onClick={this.handleClick}>Go</button>
+        <ul>
+          {products.map((p) => {
+            return <li>{p.name}</li>
+          })}
+        </ul>
+      </div>
+    )
+  }
 
 }
