@@ -9,11 +9,13 @@ const blaat = (state) =>({
   products: state.products
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators(
-  {
-    receivedUsers
-  },
-  dispatch,
-)
+const mapDispatchToProps = dispatch => ({
+  ...bindActionCreators(
+    {
+      receivedUsers,
+    },
+    dispatch,
+  ), // this is not to be wrapped into dispatch
+})
 
 export default connect(blaat,mapDispatchToProps)(ProductList)
