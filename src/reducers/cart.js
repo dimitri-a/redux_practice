@@ -10,9 +10,8 @@ export const cart = (state = { totalPrice: 0, items: [] }, action) => {
 
       // just testing does not make any sense
     case 'RECEIVEDUSERS':
-      console.log(action.data);
-      debugger;
-
+      console.log('RECEIVEDUSERS called in reducer :), action.data=',action.data);
+      
     default:
       return state
   }

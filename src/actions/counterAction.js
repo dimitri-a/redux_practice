@@ -11,11 +11,24 @@ export const receivedUsers = (data) => (
 )
 
 //thunk
-export const getUsers = dispatch => {
-  return fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(json => dispatch(receivedUsers(json)))
-}
+// export const getUsers = dispatch => {
+//   fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(response => response.json())
+//     .then(json => dispatch(receivedUsers(json)))
+// }
+
+export const getUsers = () => async dispatch => {
+  try {
+    const url = `https://jsonplaceholder.typicode.com/users`;
+    const response = await fetch(url);
+    const responseBody = await response.json();
+    dispatch(receivedUsers(responseBody));
+  } catch (error) {
+    console.error(error);
+   
+  }
+};
+
 
 
 // const fetchPosts = subreddit => dispatch => {

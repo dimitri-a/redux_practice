@@ -5,11 +5,11 @@ export class ProductList extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log('hi', props);
+    console.log('props=', props);
   }
 
   handleClick = () => {
-    this.props.receivedUsers();
+    this.props.getUsers();
   }
 
   //dispatch(getUsers());
