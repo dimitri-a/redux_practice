@@ -3,9 +3,9 @@ export const incrementCounter = () => ({
 })
 
 
-export const gotUsers = (data) => (
+export const receivedUsers = (data) => (
   {
-    type: 'GOTUSERS',
+    type: 'RECEIVEDUSERS',
     data
   }
 )
@@ -14,7 +14,7 @@ export const gotUsers = (data) => (
 export const getUsers = dispatch => {
   return fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
-    .then(json => dispatch(gotUsers(json)))
+    .then(json => dispatch(receivedUsers(json)))
 }
 
 

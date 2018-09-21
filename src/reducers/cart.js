@@ -8,7 +8,8 @@ export const cart = (state = { totalPrice: 0, items: [] }, action) => {
     case 'ADD_TO_CART':
       return { ...state, items: [...state.items, action.id] }
 
-    case 'GOTUSERS':
+      // just testing does not make any sense
+    case 'RECEIVEDUSERS':
       console.log(action.data);
       debugger;
 
